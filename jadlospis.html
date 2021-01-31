@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz</title>
+    <link rel="stylesheet" href="./resources/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Lato&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="box">
+        <header>
+            <h1>Twój spersonalizowany jadłospis</h1>
+            <img src="./resources/menu.jfif" alt="zdrowe menu">
+        </header>
+        <main>
+            <section class="inner">
+                <p>Wypełnij formularz, aby otrzymać miesięczny jadłospis zawierający przepisy na <strong>zdrowie i smacze posiłki</strong>, 
+            zgodne z twoimi potrzebami i preferencjami.</p>
+                <p>Zachowaj szczupłą sylwetkę, zdrowie i energię bez wyrzeczeń!</p>
+                <p>Jedz <b>TO</b> co lubisz i <b>JAK</b> lubisz!</p>
+            </section>
+            <hr>
+            <section class="inner">
+                <form action="potwierdzenie.html" method="POST">
+      
+                    <h2>Podstawowe informacje o tobie</h2>
+                    
+                    <div>
+                        <span>Twoja płeć:</span>
+                        <div class="radio">
+                            <input type="radio" name="sex" id="K" value="K" class="r" required>
+                            <label for="K">Kobieta</label>
+                            <br>
+                            <input type="radio" name="sex" id="M" value="M">
+                            <label for="M">Mężczyzna</label>
+                        </div>
+                        
+                    </div>
+        
+                    <br>
+        
+                    <div>
+                        <label for="wiek">Ile masz lat?</label>
+                        <br>
+                        <select name="wiek" id="wiek" required>
+                        <option value="18-25">18-25</option>
+                        <option value="26-35">26-35</option>
+                        <option value="36-50">36-50</option>
+                        <option value="51-65">51-65</option>
+                        <option value="66-80">66-80</option>
+                        <option value="80+">80+</option>
+                        </select>
+                    </div>
+        
+                    <br>
+                    
+                    <div>
+                        <label for="waga">Ile ważysz?</label>
+                        <br>
+                        <select name="waga" id="waga" required>
+                            <option value="<50kg">do 50 kg</option>
+                            <option value="....">...</option>
+                            <option value="....">...</option>
+                            <option value="....">...</option>
+                            <option value="....">...</option>
+                            <option value="powyżej ... kg">powyżej ... kg</option>
+                        </select>
+                    </div>
+    
+                    <hr>
+        
+                    <h2>Twój styl życia</h2>
+                    <div>
+                        <label for="kroki">Ile kroków średnio robisz w ciągu dnia?</label>
+                        <br>
+                        <input type="number" name="kroki" id="kroki" min="1000" max="20000" step="1000" placeholder="4 000" required>
+                    </div>
+    
+                    <br>
+                    
+                    <div>
+                        <label for="sport">Czy uprawiasz sport?</label>
+                        <br>
+                        <input list="sport" required>
+                        <datalist id="sport">
+                            <option value="Nie uprawiam sportu">
+                            <option value="Rekreacja">
+                            <option value="Sporty outdorowe">
+                            <option value="Sporty indoorowe">
+                            <option value="Uprawiam intensywny sport">
+                        </datalist>
+                    </div>
+                    <!-- 
+                        <input type="text" name="kroki" id="kroki" pattern="[0-9]{10000}">
+                        -->
+                    <br>
+
+                    <div>
+                        <label for="sport-time">Ile godzin poświęcasz tygodniowo na uprawianie sportu?</label>
+                        <br>
+                        <input type="number" name="sport-time" id="sport-time" placeholder="podaj cyfrę dodatnią" min="1" max="20" required>
+                    </div>
+                    <br>
+                    
+                    <div>
+                        <label for="Sprawność">Jak oceniasz swoją aktywność fizyczną? (w skali od 1 - 10)</label>
+                        <br>
+                        <br>
+                        <span>Niekatywny (-a)</span>
+                        <input type="range" name="sprawność" id="sprawność" value="5" min="1" max="10">
+                        <span>Bardzo aktywny (-a)</span>
+                    </div>
+                    
+    
+                    <hr>
+        
+                    <h2>Twój styl odżywiania</h2>
+                    <div>
+                        <span>Zaznacz swoje ulubione posiłki (od 4 do 6)</span>
+                        <br>
+                        <br>
+                        <input type="checkbox" name="posilek" id="I sniadania" value="I sniadanie">
+                        <label for="I sniadanie">I śniadanie</label><br>
+                        <input type="checkbox" name="posilek" id="II sniadania" value="II sniadanie">
+                        <label for="II sniadanie">II śniadanie</label><br>
+                        <input type="checkbox" name="posilek" id="snack" value="snack">
+                        <label for="snack">Przekąska między śniadaniem i obiadem</label><br>
+                        <input type="checkbox" name="posilek" id="Lunch" value="Lunch">
+                        <label for="Lunch">Lunch</label><br>
+                        <input type="checkbox" name="posilek" id="obiad" value="obiad">
+                        <label for="obiad">Obiad</label><br>
+                        <input type="checkbox" name="posilek" id="podwieczorek" value="podwieczorek">
+                        <label for="podwieczorek">Podwieczorek</label><br>
+                        <input type="checkbox" name="posilek" id="o-k" value="o-k">
+                        <label for="o-k">Obiado-kolacja</label><br>
+                        <input type="checkbox" name="posilek" id="Kolacja" value="Kolacja">
+                        <label for="Kolacja">Kolacja</label>
+                    </div>  
+                    
+                    <br>
+                    <div> 
+                        <label for="extra">Twoje uwagi:</label>
+                        <br>
+                        <br>
+                        <textarea id="extra" name="extra" rows="10" cols="50" placeholder="Wymień produkty, których unikasz (nie lubisz ich lub masz na nie alergię)." required></textarea>
+                    </div>
+                    
+
+                    <hr> 
+
+                    <h2>Zamów jadłospis</h2>
+                    <p>Podaj swój adres e-mail, na który wyślemy skomponowany specjalnie dla ciebie jadłospis.</p>
+                    <div>
+                        <input type="text" placeholder="podaj swój e-mail" required>
+                        <br>
+                        <input type="submit" value="Zamów" class="button">
+                    </div>
+                    
+                    
+                </form>
+            </section>
+
+        </main>
+        <hr>
+        <footer>
+            <a href="index.html">wróć na stronę główną</a>
+        </footer>
+    </section>
+</body>
+</html>

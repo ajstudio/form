@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz</title>
+    <link rel="stylesheet" href="./resources/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Lato&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="box">
+        <header>
+            <h1>Sklep ze zdrową żywnością</h1>
+            <img src="./resources/sklep.jfif" alt="zdrowe zakupy">
+        </header>
+        <main>
+            <section class="inner">
+                <form action="potwierdzenie1.html" method="POST">
+                    <p>Zaloguj się, aby zrobić zakupy w sklepie ze zdrową żywnością.</p>
+                    <br>
+                    <div>
+                        <p class="center">Podaj nazwę użytkownika i hasło</p>
+                        <br>
+                        <input type="text" id="user" name="user"  placeholder="nazwa użytkownika" required>
+                        <br>
+                        <input type="password" id="password" name="password" placeholder="hasło"required>
+                        <br>
+                        <input type="submit" value="Zaloguj" class="button">
+                        </div>
+                </form>
+            </section>
+        </main>
+        <hr>
+        <footer>
+            <a href="index.html">wróć na stronę główną</a>
+        </footer>
+    </section>
+</body>
+</html>
